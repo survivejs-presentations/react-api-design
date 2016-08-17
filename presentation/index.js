@@ -6,6 +6,7 @@ import {
   Appear,
   BlockQuote,
   Cite,
+  CodePane,
   Deck,
   Heading,
   Image,
@@ -33,18 +34,7 @@ require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = {
-  assembly: require("../assets/assembly.jpg").replace("/", ""),
-  babel: require("../assets/babel.jpg").replace("/", ""),
-  city: require("../assets/city.jpg").replace("/", ""),
-  components: require("../assets/components.jpg").replace("/", ""),
-  cowboy: require("../assets/cowboy.jpg").replace("/", ""),
-  enterprise: require("../assets/enterprise.jpg").replace("/", ""),
-  jumper: require("../assets/jumper.jpg").replace("/", ""),
-  legos: require("../assets/legos.jpg").replace("/", ""),
-  survivejs: require("../assets/survivejs.png").replace("/", ""),
-  tools: require("../assets/tools.jpg").replace("/", ""),
-  types: require("../assets/types.jpg").replace("/", ""),
-  unique: require("../assets/unique.png").replace("/", "")
+  survivejs: require("../images/survivejs.png").replace("/", "")
 };
 
 preloader(images);
@@ -67,7 +57,396 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={slideTransition} bgImage={images.troll} bgDarken={0.85}>
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Starting Points
+            </Heading>
+            <Markdown>
+{`
+* Needed a table for custom CMS. No proper solutions at the time.
+* Decided to push logic to a column definition.
+* Developed as a single package containing everything you need (monolith).
+* First commit - 19.01.2015
+* First public release three days later
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.2.0 - 22.01.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_01.js")}
+              style={{fontSize: "0.75em"}}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_02.jsx")}
+              style={{fontSize: "0.65em"}}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_03.jsx")}
+              style={{fontSize: "0.75em"}}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.3.0 - 29.01.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Further iteration on the basic ideas.
+* Pushed [react-pagify](https://www.npmjs.com/package/react-pagify) to a package of its own. Used to experiment with React context based design.
+* Separated pagination logic to [segmentize](https://www.npmjs.com/package/segmentize) (no React dependency).
+* Search, sort, inline editing through the cell interface.
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_04.jsx")}
+              style={{fontSize: "0.75em"}}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.4.0 - 03.02.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Refactored events as header (handlers) to pass to the component. On retrospect, not flexible enough.
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_05.jsx")}
+              style={{fontSize: "0.75em"}}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.5.0 - 07.04.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* First external contribution.
+* Documentation improvements, React fatigue
+* Initial tests
+* More flexible sorting (basic algorithms)
+* Highlighting search reasults
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.6.0 - 04.06.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* ![BitHound](https://www.bithound.io/github/reactabular/reactabular/badges/score.svg) ![David](https://david-dm.org/reactabular/reactabular.svg)
+* More flexible highlighting interface
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.7.0 - 27.08.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* More external contributions (6 contributors by now)
+* [![Join the chat at https://gitter.im/reactabular/reactabular](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/reactabular/reactabular) [![build status](https://secure.travis-ci.org/reactabular/reactabular.svg)](http://travis-ci.org/reactabular/reactabular)
+* Allow custom props per row
+* Support for editing complex objects
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.8.0 - 14.10.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Realized setting row keys is a good idea (performance)
+* More React fatigue (tooling keeps changing)
+* Moved from Jest to Karma/Mocha
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.9.0 - 04.11.2015
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Dropped dev branch in favor of single one (kept getting PRs against master)
+* Split up documentation to multiple files over one huge README
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.10.0 - 19.01.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* 11 external contributors
+* header &rarr; columnNames
+* className &rarr; headerClass
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.11.0 - 14.02.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Multi-column sorting (external contribution)
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.12.0 - 22.03.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Wrote changelog (better late than never)
+* Bumped lodash minimum version to 4.0 (new API) and fixed the imports
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.13.0 - 07.06.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Support multiple search filters (external contribution)
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              0.14.0 - 09.06.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Force row key to be set
+* Dropped certain heavy dependencies (react/lib/update, lodash/merge)
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              1.0.0 - 25.06.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Almost complete rewrite sponsored by [Kenandy Inc.](http://www.kenandy.com/)
+* Rewrote documentation using [Catalog](https://interactivethings.github.io/catalog/)
+* Cleaned up core design - rows, column definition, React definition
+* Monorepo using [Lerna](https://lernajs.io/) and split to eight packages
+* READMEs are aggregated as runnable documentation
+* Started driving development through examples (drag and drop, etc.)
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              2.0.0 - 16.08.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* 17(!) packages now as examples have been converted to packages
+* Extracted [react-edit](https://www.npmjs.org/package/react-edit). Might go to a repository of its own later.
+* Drag and drop helpers, tree helpers, search helpers, whatnot
+* [reactabular-easy](https://www.npmjs.com/package/reactabular-easy) - Opinionated wrapper that loses some flexibility, but is easier to use (no need to glue parts together)
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              Development Model
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Example Driven
+            </Heading>
+            <Markdown>
+{`
+* Examples are grown into packages &rarr; becomes a new README
+* As the package idea is solid, unit tests are written to support the functionality
+* [Codecov](https://codecov.io/gh/reactabular/reactabular) shows what to improve
+* Ideally there would be acceptance tests against examples
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              The Good
+            </Heading>
+            <Markdown>
+{`
+* Monorepo avoids configuration overhead (packaging, testing)
+* One repository to maintain - Alternative: consume configuration as a dependency
+* Easier to make packages &rarr; you make more packages
+* Leads to decoupled design - Logic separate from React &rarr; Angular/Cycle/??? version
+* Possible to write integration tests
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              The Bad
+            </Heading>
+            <Markdown>
+{`
+* Monorepos aren't fully understood &rarr; Tooling not stable yet
+* If you aren't careful, the repository can become huge (see Babel)
+* lerna publish --skip-npm - npm site readme update bug &rarr; Manual releases needed :(
+* Harder to contribute due to the exotic setup?
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              The Ugly
+            </Heading>
+            <Markdown>
+{`
+* Single issue tracker, potentially harder to manage
+* No automated releases yet. Ideal: tag &rarr; CI releases for you
+* Changelog management is rough. Tooling might appear.
+* Hard to collaborate if your monorepo is private and you want to contract.
+* Git log can become rather large.
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition}>
             <Heading caps fit size={1} textColor="tertiary">
               Questions?
             </Heading>
@@ -89,19 +468,6 @@ export default class Presentation extends React.Component {
                 Juho Vepsäläinen
               </Heading>
             </Link>
-          </Slide>
-
-          <Slide transition={slideTransition} textColor="primary">
-            <Heading caps fit size={1} textColor="secondary">
-              Image Credits
-            </Heading>
-            <Markdown>
-              {`
-* [estefania17 (PD)](https://pixabay.com/en/lego-blocks-bricks-toy-game-252602/), [Kae (PD)](https://commons.wikimedia.org/wiki/File:Componentes.JPG)
-* [elijay (PD)](https://pixabay.com/en/cowboy-horse-dog-pasture-western-1130695/), [skeeze (PD)](https://pixabay.com/en/leonard-nimoy-william-shatner-393861/)
-* [Efraimstochter (PD)](https://pixabay.com/en/wheels-machine-installation-art-784865/)
-              `}
-            </Markdown>
           </Slide>
         </Deck>
       </Spectacle>
