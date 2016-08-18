@@ -64,8 +64,8 @@ export default class Presentation extends React.Component {
             <Markdown>
 {`
 * Needed a table for custom CMS. No proper solutions at the time.
-* Decided to push logic to a column definition.
-* Developed as a single package containing everything you need (monolith).
+* Decided to push logic to a column definition
+* Developed as a single package containing everything you need (monolith)
 * First commit - 19.01.2015
 * First public release three days later
 `}
@@ -111,10 +111,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
 {`
-* Further iteration on the basic ideas.
+* Further iteration on the basic ideas
 * Pushed [react-pagify](https://www.npmjs.com/package/react-pagify) to a package of its own. Used to experiment with React context based design.
-* Separated pagination logic to [segmentize](https://www.npmjs.com/package/segmentize) (no React dependency).
-* Search, sort, inline editing through the cell interface.
+* Separated pagination logic to [segmentize](https://www.npmjs.com/package/segmentize) (no React dependency)
+* Search, sort, inline editing through the cell interface
 `}
             </Markdown>
           </Slide>
@@ -162,11 +162,11 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
 {`
-* First external contribution.
+* First external contribution
 * Documentation improvements, React fatigue
 * Initial tests
 * More flexible sorting (basic algorithms)
-* Highlighting search reasults
+* Highlighting search results
 `}
             </Markdown>
           </Slide>
@@ -240,7 +240,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
 {`
-* Dropped dev branch in favor of single one (kept getting PRs against master)
+* Dropped dev branch in favor of single one (kept getting PRs against master), not a lot of value in separation
 * Split up documentation to multiple files over one huge README
 `}
             </Markdown>
@@ -352,7 +352,7 @@ export default class Presentation extends React.Component {
 * Cleaned up core design - rows, column definition, React definition
 * Monorepo using [Lerna](https://lernajs.io/) and split to eight packages
 * READMEs are aggregated as runnable documentation
-* Started driving development through examples (drag and drop, etc.)
+* Started driving development through examples based on client needs (drag and drop, etc.)
 `}
             </Markdown>
           </Slide>
@@ -369,10 +369,46 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
 {`
-* 17(!) packages now as examples have been converted to packages
+* 17(!) packages now
 * Extracted [react-edit](https://www.npmjs.org/package/react-edit). Might go to a repository of its own later.
 * Drag and drop helpers, tree helpers, search helpers, whatnot
 * [reactabular-easy](https://www.npmjs.com/package/reactabular-easy) - Opinionated wrapper that loses some flexibility, but is easier to use (no need to glue parts together)
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_01.js")}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_06.jsx")}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="white" notes="">
+            <CodePane
+              lang="jsx"
+              source={require("raw!../examples/reactabular_07.jsx")}
+            />
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Next Steps
+            </Heading>
+            <Markdown>
+{`
+* Push performance (esp. reactabular-easy since there's room)
+* Improve tree abstraction further (now just utilities)
+* Add missing tests (unit, acceptance, property based tests)
+* Move **react-edit** to a repository of its own and make it more useful standalone
+* Experiment with transformations (sort, search, etc.) &rarr; Detect changes and go functional reactive over pure functional?
 `}
             </Markdown>
           </Slide>
@@ -399,14 +435,31 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
+              Lerna Briefly
+            </Heading>
+            <Markdown>
+{`
+* [Lerna](https://lernajs.io/) is a tool for managing multiple packages
+* Expects a *packages* directory
+* **lerna bootstrap** - Install dependencies of all packages
+* **lerna publish** - Update and publish packages that have changed
+* **lerna run** - Run a script on each package (say, a build script)
+* Two versioning modes: fixed (think Babel) and independent
+* It would be good to have a [hybrid mode](https://github.com/lerna/lerna/issues/298) to enable incubation
+`}
+            </Markdown>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
               The Good
             </Heading>
             <Markdown>
 {`
 * Monorepo avoids configuration overhead (packaging, testing)
-* One repository to maintain - Alternative: consume configuration as a dependency
-* Easier to make packages &rarr; you make more packages
-* Leads to decoupled design - Logic separate from React &rarr; Angular/Cycle/??? version
+* One repository to maintain over many - Alternative: consume configuration as a dependency
+* Easier to author packages &rarr; you make more packages
+* Leads to decoupled design - Logic separate from React
 * Possible to write integration tests
 `}
             </Markdown>
@@ -420,7 +473,7 @@ export default class Presentation extends React.Component {
 {`
 * Monorepos aren't fully understood &rarr; Tooling not stable yet
 * If you aren't careful, the repository can become huge (see Babel)
-* lerna publish --skip-npm - npm site readme update bug &rarr; Manual releases needed :(
+* Due to npm bug, manual releases are still needed &rarr; **lerna publish --skip-npm**
 * Harder to contribute due to the exotic setup?
 `}
             </Markdown>
@@ -435,8 +488,8 @@ export default class Presentation extends React.Component {
 * Single issue tracker, potentially harder to manage
 * No automated releases yet. Ideal: tag &rarr; CI releases for you
 * Changelog management is rough. Tooling might appear.
-* Hard to collaborate if your monorepo is private and you want to contract.
-* Git log can become rather large.
+* Hard to collaborate if your monorepo is private and you want to contract
+* Git log can become rather large
 `}
             </Markdown>
           </Slide>
