@@ -82,7 +82,6 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="jsx"
               source={require("raw!../examples/reactabular_01.js")}
-              style={{fontSize: "0.75em"}}
             />
           </Slide>
 
@@ -90,7 +89,6 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="jsx"
               source={require("raw!../examples/reactabular_02.jsx")}
-              style={{fontSize: "0.65em"}}
             />
           </Slide>
 
@@ -98,7 +96,6 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="jsx"
               source={require("raw!../examples/reactabular_03.jsx")}
-              style={{fontSize: "0.75em"}}
             />
           </Slide>
 
@@ -126,7 +123,6 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="jsx"
               source={require("raw!../examples/reactabular_04.jsx")}
-              style={{fontSize: "0.75em"}}
             />
           </Slide>
 
@@ -151,7 +147,6 @@ export default class Presentation extends React.Component {
             <CodePane
               lang="jsx"
               source={require("raw!../examples/reactabular_05.jsx")}
-              style={{fontSize: "0.75em"}}
             />
           </Slide>
 
