@@ -396,7 +396,7 @@ export default class Presentation extends React.Component {
 {`
 * Examples are grown into packages &rarr; becomes a new README
 * As the package idea is solid, unit tests are written to support the functionality
-* [Codecov](https://codecov.io/gh/reactabular/reactabular) shows what to improve
+* [![codecov](https://codecov.io/gh/reactabular/reactabular/branch/master/graph/badge.svg)](https://codecov.io/gh/reactabular/reactabular) shows what to improve
 * Ideally there would be acceptance tests against examples
 `}
             </Markdown>
