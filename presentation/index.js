@@ -188,7 +188,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
 {`
-* ![BitHound](https://www.bithound.io/github/reactabular/reactabular/badges/score.svg) ![David](https://david-dm.org/reactabular/reactabular.svg)
+* [![bitHound Score](https://www.bithound.io/github/reactabular/reactabular/badges/score.svg)](https://www.bithound.io/github/reactabular/reactabular) [![Dependency Status](https://david-dm.org/reactabular/reactabular.svg)](https://david-dm.org/reactabular/reactabular)
 * More flexible highlighting interface
 `}
             </Markdown>
