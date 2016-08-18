@@ -53,7 +53,7 @@ export default class Presentation extends React.Component {
               React API Design
             </Heading>
             <Heading size={2} textColor="white">
-              Case Reactabular
+              Case <Link href="http://reactabular.js.org">Reactabular</Link>
             </Heading>
           </Slide>
 
