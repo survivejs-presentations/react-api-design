@@ -494,12 +494,6 @@ export default class Presentation extends React.Component {
             </Markdown>
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading caps fit size={1} textColor="tertiary">
-              Questions?
-            </Heading>
-          </Slide>
-
           <Slide transition={slideTransition} bgColor="white" notes="">
             <Heading size={1} textColor="primary">
               SurviveJS
@@ -516,6 +510,12 @@ export default class Presentation extends React.Component {
                 Juho Vepsäläinen
               </Heading>
             </Link>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              Thank you
+            </Heading>
           </Slide>
         </Deck>
       </Spectacle>
