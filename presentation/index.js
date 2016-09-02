@@ -398,17 +398,35 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1} textColor="tertiary">
+              3.0.0 - 01.09.2016
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="tertiary">
+            <Heading caps fit size={1} textColor="primary">
+              Main Improvements
+            </Heading>
+            <Markdown>
+{`
+* Virtualization (performance!), [reactabular-virtualized](https://www.npmjs.com/package/reactabular-virtualized)
+* Minor API tweaks (onRow signature)
+* Integrated virtualization and tree functionality to reactabular-easy
+`}
+            </Markdown>
+          </Slide>
+
           <Slide transition={slideTransition} bgColor="tertiary">
             <Heading caps fit size={1} textColor="primary">
               Next Steps
             </Heading>
             <Markdown>
 {`
-* Push performance (esp. reactabular-easy since there's room)
 * Improve tree abstraction further (now just utilities)
 * Add missing tests (unit, acceptance, property based tests)
 * Move **react-edit** to a repository of its own and make it more useful standalone
-* Experiment with transformations (sort, search, etc.) &rarr; Detect changes and go functional reactive over pure functional?
 `}
             </Markdown>
           </Slide>
