@@ -460,10 +460,10 @@ export default class Presentation extends React.Component {
 * [Lerna](https://lernajs.io/) is a tool for managing multiple packages
 * Expects a *packages* directory
 * **lerna bootstrap** - Install dependencies of all packages
-* **lerna publish** - Update and publish packages that have changed
+* **lerna publish** - Update and publish changed packages
 * **lerna run** - Run a script on each package (say, a build script)
 * Two versioning modes: fixed (think Babel) and independent
-* It would be good to have a [hybrid mode](https://github.com/lerna/lerna/issues/298) to enable incubation
+* Good to have - [hybrid mode](https://github.com/lerna/lerna/issues/298) to enable incubation
 `}
             </Markdown>
           </Slide>
