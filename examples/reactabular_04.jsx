@@ -1,4 +1,4 @@
-var columns: [
+var columns = [
   ...
   {
     property: 'followers',
