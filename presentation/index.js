@@ -338,6 +338,44 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Virtualization (performance!), <Link href="https://www.npmjs.com/package/reactabular-virtualized">reactabular-virtualized</Link></ListItem></Appear>
               <Appear><ListItem>Minor API tweaks (onRow signature)</ListItem></Appear>
               <Appear><ListItem>Integrated virtualization and tree functionality to reactabular-easy</ListItem></Appear>
+              <Appear><ListItem>3.0.6 - Reworked virtualization so that it works with Radium (timing issue)</ListItem></Appear>
+              <Appear><ListItem>3.0.6 - Allowed <code>BodyRow</code> <code>shouldComponentUpdate</code> to be set <code>true</code>. This should have been a minor version instead</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              4.0.0 - 12.09.2016
+            </Heading>
+            <List>
+              <Appear><ListItem>Breaking change at <b>reactabular-easy</b> - Pushed <code>onDragColumn</code> control to user</ListItem></Appear>
+              <Appear><ListItem>Single, urgent change forced SemVer push</ListItem></Appear>
+              <Appear><ListItem>4.x series introduced extensions to different APIs (tree, easy, edit)</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              5.0.0 - 28.09.2016
+            </Heading>
+            <List>
+              <Appear><ListItem>Breaking change at <b>reactabular-easy</b> - Pushed toggle to <code>onToggleShowingChildren</code></ListItem></Appear>
+              <Appear><ListItem>Maybe maintaining <b>reactabular-easy</b> at the same repository {`wasn't`} the brightest idea</ListItem></Appear>
+              <Appear><ListItem>5.x series provided fixes especially to tree functionality. Also styling hooks through <code>props</code> interface.</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              6.0.0 - 14.10.2016
+            </Heading>
+            <List>
+              <Appear><ListItem>Breaking changes to harmonize styling related naming</ListItem></Appear>
+              <Appear><ListItem>Reworked the tree API signatures so that they are consistent. Also added more power to it.</ListItem></Appear>
+              <Appear><ListItem>Added <code>scrollTo(index)</code> for virtualized tables</ListItem></Appear>
+              <Appear><ListItem>I botched the initial release as Lerna {`didn't`} bump peer version ranges (bug?). Stronger prepublish flow would be nice.</ListItem></Appear>
+              <Appear><ListItem>6.x series introduced smaller fixes and improved tree</ListItem></Appear>
+              <Appear><ListItem>Increasing interest (30 contributors now) in form of PRs and support requests</ListItem></Appear>
             </List>
           </Slide>
 
