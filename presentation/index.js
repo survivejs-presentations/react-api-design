@@ -34,6 +34,7 @@ require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = {
+  demo: require("../images/demo.gif").replace("/", ""),
   survivejs: require("../images/survivejs.png").replace("/", "")
 };
 
@@ -58,6 +59,16 @@ export default class Presentation extends React.Component {
             <Heading size={2} textColor="tertiary">
               Case <Link href="http://reactabular.js.org">Reactabular</Link>
             </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading size={1} caps>
+              Reactabular
+            </Heading>
+            <img src={images.demo} height="524px" alt="Reactabular" />
+            <Text>
+              <Link href="https://twitter.com/sapegin">Thanks @sapegin</Link>
+            </Text>
           </Slide>
 
           <Slide transition={slideTransition}>
