@@ -6,15 +6,15 @@ columns: [
     },
     cell: {
       transforms: [
-      editable(
-        edit.dropdown({
-          options: transform(countries, (result, name, value) => {
-            result.push({ value, name });
-          }, [])
-        })
-      )
+        editable(
+          edit.dropdown({
+            options: transform(countries, (result, name, value) => {
+              result.push({ value, name });
+            }, [])
+          })
+        )
       ],
-      format: (country, extra) => highlight.cell(country, extra),
+      format: highlight.cell,
       // Resolve hint for search and highlighting
       resolve: country => countries[country]
     }

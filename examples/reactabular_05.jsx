@@ -5,6 +5,6 @@ var header = {
         column,
         this.state.data,
         this.setState.bind(this)
-    );
+    )
   }
 };
