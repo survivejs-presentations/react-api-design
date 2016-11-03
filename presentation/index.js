@@ -237,8 +237,8 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <Appear><ListItem>11 external contributors</ListItem></Appear>
-              <Appear><ListItem>header &rarr; columnNames</ListItem></Appear>
-              <Appear><ListItem>className &rarr; headerClass</ListItem></Appear>
+              <Appear><ListItem><code>header</code> &rarr; <code>columnNames</code></ListItem></Appear>
+              <Appear><ListItem><code>className</code> &rarr; <code>headerClass</code></ListItem></Appear>
             </List>
           </Slide>
 
@@ -348,8 +348,8 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <Appear><ListItem>Virtualization (performance!), <Link href="https://www.npmjs.com/package/reactabular-virtualized">reactabular-virtualized</Link></ListItem></Appear>
-              <Appear><ListItem>Minor API tweaks (onRow signature)</ListItem></Appear>
-              <Appear><ListItem>Integrated virtualization and tree functionality to reactabular-easy</ListItem></Appear>
+              <Appear><ListItem>Minor API tweaks (<code>onRow</code> signature)</ListItem></Appear>
+              <Appear><ListItem>Integrated virtualization and tree functionality to <b>reactabular-easy</b></ListItem></Appear>
               <Appear><ListItem>3.0.6 - Reworked virtualization so that it works with Radium and allowed <code>BodyRow</code> <code>shouldComponentUpdate</code> to be set <code>true</code>.</ListItem></Appear>
               <Appear><ListItem>This should have been a minor version instead</ListItem></Appear>
             </List>
