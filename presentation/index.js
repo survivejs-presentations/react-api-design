@@ -337,8 +337,8 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Virtualization (performance!), <Link href="https://www.npmjs.com/package/reactabular-virtualized">reactabular-virtualized</Link></ListItem></Appear>
               <Appear><ListItem>Minor API tweaks (onRow signature)</ListItem></Appear>
               <Appear><ListItem>Integrated virtualization and tree functionality to reactabular-easy</ListItem></Appear>
-              <Appear><ListItem>3.0.6 - Reworked virtualization so that it works with Radium (timing issue)</ListItem></Appear>
-              <Appear><ListItem>3.0.6 - Allowed <code>BodyRow</code> <code>shouldComponentUpdate</code> to be set <code>true</code>. This should have been a minor version instead</ListItem></Appear>
+              <Appear><ListItem>3.0.6 - Reworked virtualization so that it works with Radium and allowed <code>BodyRow</code> <code>shouldComponentUpdate</code> to be set <code>true</code>.</ListItem></Appear>
+              <Appear><ListItem>This should have been a minor version instead</ListItem></Appear>
             </List>
           </Slide>
 
@@ -369,13 +369,12 @@ export default class Presentation extends React.Component {
               6.0.0 - 14.10.2016
             </Heading>
             <List>
-              <Appear><ListItem>Breaking changes to harmonize styling related naming</ListItem></Appear>
-              <Appear><ListItem>Reworked the tree API signatures for consistency and power</ListItem></Appear>
-              <Appear><ListItem>Moved back to Jest (fast and easy compared to earlier)</ListItem></Appear>
+              <Appear><ListItem>Breaking changes to harmonize styling related naming and tree API signatures</ListItem></Appear>
+              <Appear><ListItem>Moved back to Jest (fast and easy now)</ListItem></Appear>
               <Appear><ListItem>Added <code>scrollTo(index)</code> for virtualized tables</ListItem></Appear>
               <Appear><ListItem>I botched the initial release as Lerna {`didn't`} bump peer version ranges (bug?). Stronger prepublish flow would be nice.</ListItem></Appear>
               <Appear><ListItem>6.x series introduced smaller fixes and improved tree</ListItem></Appear>
-              <Appear><ListItem>Increasing interest (30 contributors now) in form of PRs and support requests</ListItem></Appear>
+              <Appear><ListItem>Increasing interest (30 contributors) and support requests</ListItem></Appear>
             </List>
           </Slide>
 
@@ -387,6 +386,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Improve tree abstraction further (now just utilities)</ListItem></Appear>
               <Appear><ListItem>Add missing tests (unit, acceptance, property based tests)</ListItem></Appear>
               <Appear><ListItem>Move logic parts repositories of their own</ListItem></Appear>
+              <Appear><ListItem>Let community take over those repositories (thanks <b>git-toni</b>)</ListItem></Appear>
             </List>
           </Slide>
 
