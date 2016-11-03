@@ -9,9 +9,11 @@ columns: [
     cell: (i => {
       var remove = () => {
         // This could go through flux etc.
-        this.state.data.splice(i, 1);
+        var data = this.state.data;
 
-        this.setState({ data: this.state.data });
+        this.setState({
+          data: data.slice(0, i).concat(data.slice(i + 1))
+        });
       };
 
       return <span onClick={remove.bind(this)}>&#10007;</span>;
