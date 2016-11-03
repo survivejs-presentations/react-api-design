@@ -88,7 +88,7 @@ export default class Presentation extends React.Component {
               Starting Points
             </Heading>
             <List>
-              <Appear><ListItem>Needed a table for a CMS. No proper solutions at the time.</ListItem></Appear>
+              <Appear><ListItem>Needed a table for a CRM. No proper solutions at the time.</ListItem></Appear>
               <Appear><ListItem>Decided to push logic to a column definition</ListItem></Appear>
               <Appear><ListItem>Developed as a single package containing everything you need (monolith)</ListItem></Appear>
               <Appear><ListItem>First commit - 19.01.2015</ListItem></Appear>
@@ -184,6 +184,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Initial tests</ListItem></Appear>
               <Appear><ListItem>More flexible sorting (basic algorithms)</ListItem></Appear>
               <Appear><ListItem>Highlighting search results</ListItem></Appear>
+              <Appear><ListItem>Brought <b>lodash</b> to the project</ListItem></Appear>
             </List>
           </Slide>
 
@@ -488,7 +489,7 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>Monorepos {`aren't`} fully understood &rarr; Tooling not stable yet</ListItem></Appear>
               <Appear><ListItem>If you {`aren't`} careful, the repository can become huge (see Babel)</ListItem></Appear>
-              <Appear><ListItem>Due to npm bug, manual releases are still needed &rarr; <b>lerna publish --skip-npm</b></ListItem></Appear>
+              <Appear><ListItem>Due to npm bug, manual releases are still needed &rarr; <b>lerna publish --skip-npm</b>. <Link href="https://www.npmjs.com/package/lerna-npm-readme-hack">lerna-npm-readme-hack</Link> is an option.</ListItem></Appear>
               <Appear><ListItem>Harder to contribute due to the exotic setup?</ListItem></Appear>
             </List>
           </Slide>
