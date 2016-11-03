@@ -62,6 +62,18 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
+            <Heading caps size={1}>
+              Agenda
+            </Heading>
+            <List>
+              <Appear><ListItem>Evolution of Reactabular</ListItem></Appear>
+              <Appear><ListItem>Lessons Learned</ListItem></Appear>
+              <Appear><ListItem>Lerna</ListItem></Appear>
+              <Appear><ListItem>API Patterns</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
             <Heading size={1} caps>
               Reactabular
             </Heading>
@@ -392,7 +404,7 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition}>
             <Heading caps fit size={1}>
-              Observations
+              Lessons Learned
             </Heading>
             <List>
               <Appear><ListItem>Going to a monorepo was a good decision despite the glitches</ListItem></Appear>
@@ -421,7 +433,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Examples are grown into packages &rarr; becomes a new README</ListItem></Appear>
               <Appear><ListItem>As the package idea is solid, unit tests are written to support the functionality</ListItem></Appear>
               <Appear><ListItem><Link href="https://codecov.io/gh/reactabular/reactabular"><img src="https://codecov.io/gh/reactabular/reactabular/branch/master/graph/badge.svg" alt="codecov" /></Link> shows what to improve</ListItem></Appear>
-              <Appear><ListItem>Ideally there would be acceptance tests against examples</ListItem></Appear>
+              <Appear><ListItem>Ideally there would be acceptance tests against examples to avoid regressions</ListItem></Appear>
             </List>
           </Slide>
 
