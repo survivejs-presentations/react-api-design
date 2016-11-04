@@ -73,13 +73,8 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition}>
-            <Heading size={1} caps>
-              Reactabular
-            </Heading>
-            <img src={images.demo} height="524px" alt="Reactabular" />
+          <Slide transition={slideTransition} bgImage={images.demo}>
             <Text>
-              <Link href="https://twitter.com/sapegin">Thanks @sapegin</Link>
             </Text>
           </Slide>
 
@@ -393,25 +388,79 @@ export default class Presentation extends React.Component {
 
           <Slide transition={slideTransition}>
             <Heading caps fit size={1}>
-              Next Steps
+              7.0.0 - 04.11.2016
             </Heading>
             <List>
-              <Appear><ListItem>Improve tree abstraction further (now just utilities)</ListItem></Appear>
-              <Appear><ListItem>Add missing tests (unit, acceptance, property based tests)</ListItem></Appear>
-              <Appear><ListItem>Move logic parts repositories of their own</ListItem></Appear>
-              <Appear><ListItem>Let community take over those repositories (thanks <b>git-toni</b>)</ListItem></Appear>
+              <Appear><ListItem>Mainly a bug fix release with a couple of new features</ListItem></Appear>
+              <Appear><ListItem>Implemented drag and drop for tree rows</ListItem></Appear>
+              <Appear><ListItem>Reworked <b>reactabular-easy</b> so that it maintains minimal amount of state</ListItem></Appear>
+              <Appear><ListItem>Pushed selection logic to <Link href="https://www.npmjs.com/package/selectabular">selectabular</Link> (thanks <b>git-toni</b>)</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={slideTransition}>
             <Heading caps fit size={1}>
-              Lessons Learned
+              Next Steps
             </Heading>
             <List>
-              <Appear><ListItem>Going to a monorepo was a good decision despite the glitches</ListItem></Appear>
+              <Appear><ListItem>Move logic parts repositories of their own</ListItem></Appear>
+              <Appear><ListItem>Let community take over those repositories</ListItem></Appear>
+              <Appear><ListItem>Work based on client demand and shepherd PRs</ListItem></Appear>
+              <Appear><ListItem>Improve coverage to decrease the amount of technical debt</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading caps fit size={1} textColor="tertiary">
+              Lessons Learned
+            </Heading>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              Example Driven Development is Fun
+            </Heading>
+            <List>
+              <Appear><ListItem>Examples are grown into packages &rarr; becomes a new README</ListItem></Appear>
+              <Appear><ListItem>As the package idea is solid, unit tests are written to support the functionality</ListItem></Appear>
+              <Appear><ListItem>Ideally there would be acceptance tests against examples to avoid regressions</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              Changelog Management is Hard Work
+            </Heading>
+            <List>
+              <Appear><ListItem>Current I write them as I go</ListItem></Appear>
+              <Appear><ListItem>Alternative - extract from Git logs?</ListItem></Appear>
+              <Appear><ListItem>Ideal might be somewhere in between</ListItem></Appear>
+              <Appear><ListItem>Mark dates of the upcoming release with <code>xx.xx</code> and <code>{`sed -i '' 's/xx\\-xx/11\\-05/g' **/*.md`}</code> for profit</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              Personal Lessons
+            </Heading>
+            <List>
+              <Appear><ListItem>Going to a monorepo was a good decision</ListItem></Appear>
               <Appear><ListItem>Especially architecture benefitted from the change</ListItem></Appear>
               <Appear><ListItem>Principles over features</ListItem></Appear>
-              <Appear><ListItem>SemVer is easy to muck up</ListItem></Appear>
+              <Appear><ListItem>I need to learn about API deprecation patterns (warn, then remove)</ListItem></Appear>
+            </List>
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              API Lessons
+            </Heading>
+            <List>
+              <Appear><ListItem>Using <b>TypeScript</b> or <b>Flowtype</b> might have saved time</ListItem></Appear>
+              <Appear><ListItem>I need to learn about deprecation patterns (warn, remove)</ListItem></Appear>
+              <Appear><ListItem>Bugs hide in the parts you {`haven't`} tested</ListItem></Appear>
+              <Appear><ListItem><Link href="https://codecov.io/gh/reactabular/reactabular"><img src="https://codecov.io/gh/reactabular/reactabular/branch/master/graph/badge.svg" alt="codecov" /></Link> shows what to improve</ListItem></Appear>
+              <Appear><ListItem><b>SemVer</b> is easy to muck up</ListItem></Appear>
             </List>
           </Slide>
 
@@ -423,18 +472,6 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>SemVer === {`<major>.<minor>.<patch>`}</ListItem></Appear>
               <Appear><ListItem>ComVer === {`<not compatible>.<compatible>`}</ListItem></Appear>
               <Appear><ListItem>EmoVer === {`<emotional>.<major>.<minor>`}</ListItem></Appear>
-            </List>
-          </Slide>
-
-          <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
-              Example Driven Development
-            </Heading>
-            <List>
-              <Appear><ListItem>Examples are grown into packages &rarr; becomes a new README</ListItem></Appear>
-              <Appear><ListItem>As the package idea is solid, unit tests are written to support the functionality</ListItem></Appear>
-              <Appear><ListItem><Link href="https://codecov.io/gh/reactabular/reactabular"><img src="https://codecov.io/gh/reactabular/reactabular/branch/master/graph/badge.svg" alt="codecov" /></Link> shows what to improve</ListItem></Appear>
-              <Appear><ListItem>Ideally there would be acceptance tests against examples to avoid regressions</ListItem></Appear>
             </List>
           </Slide>
 
@@ -571,10 +608,7 @@ columns: [
   const visibleColumns = columns.filter(column => column.visible);
   const rows = compose(
     tree.filter('showingChildren'),
-    tree.sort({
-      columns,
-      sortingColumns
-    }),
+    tree.sort({ columns, sortingColumns }),
     tree.search({ columns, query })
   )(this.state.rows);
 
@@ -601,6 +635,9 @@ columns: [
                 Juho Vepsäläinen
               </Heading>
             </Link>
+            <Text>
+              <Link href="https://twitter.com/sapegin">Thanks @sapegin, Alec</Link>
+            </Text>
           </Slide>
         </Deck>
       </Spectacle>
