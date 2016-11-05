@@ -462,7 +462,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <Appear><ListItem>Going to a monorepo was a good decision</ListItem></Appear>
-              <Appear><ListItem>Especially architecture benefitted from the change</ListItem></Appear>
+              <Appear><ListItem>Especially architecture benefited from the change</ListItem></Appear>
               <Appear><ListItem>Principles over features</ListItem></Appear>
               <Appear><ListItem>I need to learn about API deprecation patterns (warn, then remove)</ListItem></Appear>
             </List>
@@ -474,9 +474,8 @@ export default class Presentation extends React.Component {
             </Heading>
             <List>
               <Appear><ListItem>Using <b>TypeScript</b> or <b>Flowtype</b> might have saved time</ListItem></Appear>
-              <Appear><ListItem>I need to learn about deprecation patterns (warn, remove)</ListItem></Appear>
               <Appear><ListItem>Bugs hide in the parts you {`haven't`} tested</ListItem></Appear>
-              <Appear><ListItem><Link href="https://codecov.io/gh/reactabular/reactabular"><img src="https://codecov.io/gh/reactabular/reactabular/branch/master/graph/badge.svg" alt="codecov" /></Link> shows what to improve</ListItem></Appear>
+              <Appear><ListItem>Coverage (<Link href="https://codecov.io/gh/reactabular/reactabular"><img src="https://codecov.io/gh/reactabular/reactabular/branch/master/graph/badge.svg" alt="codecov" /></Link>) shows what to improve</ListItem></Appear>
               <Appear><ListItem><b>SemVer</b> is easy to muck up</ListItem></Appear>
             </List>
           </Slide>
