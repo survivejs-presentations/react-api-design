@@ -78,6 +78,12 @@ export default class Presentation extends React.Component {
             </Text>
           </Slide>
 
+          <Slide transition={slideTransition} bgColor="black">
+            <BlockQuote>
+              <Quote>If {`you've`} struggled with other React table components, you'll see why this one is the best! - <Link href="https://twitter.com/timdorr/status/750346565374455808">Tim Dorr</Link></Quote>
+            </BlockQuote>
+          </Slide>
+
           <Slide transition={slideTransition}>
             <Heading caps fit size={1}>
               Starting Points
