@@ -410,6 +410,17 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              Trajectories
+            </Heading>
+            <List>
+              <Appear><ListItem>Steady growth - project goes to maintenance mode (looking after PRs as time permits basically)</ListItem></Appear>
+              <Appear><ListItem>Supported growth - Development based on client needs (potential business model in dual licensing, support work)</ListItem></Appear>
+              <Appear><ListItem>Explosive growth - Reactabular becomes <b>react-router</b> of React table implementations</ListItem></Appear>
+            </List>
+          </Slide>
+
           <Slide transition={slideTransition} bgColor="secondary">
             <Heading caps fit size={1} textColor="tertiary">
               Lessons Learned
