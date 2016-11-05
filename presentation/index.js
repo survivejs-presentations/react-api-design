@@ -636,7 +636,7 @@ columns: [
               </Heading>
             </Link>
             <Text>
-              <Link href="https://twitter.com/sapegin">Thanks @sapegin, Alec</Link>
+              <Link href="https://twitter.com/sapegin">Thanks @sapegin</Link>, Alec
             </Text>
           </Slide>
         </Deck>

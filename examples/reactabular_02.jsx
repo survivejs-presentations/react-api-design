@@ -12,7 +12,7 @@ columns: [
         var data = this.state.data;
 
         this.setState({
-          data: data.slice(0, i).concat(data.slice(i + 1))
+          data: [...data.slice(0, i), ...data.slice(i + 1)]
         });
       };
 
