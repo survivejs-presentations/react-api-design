@@ -34,6 +34,7 @@ require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = {
+  changelog: require("../images/changelog.jpg").replace("/", ""),
   demo: require("../images/demo.gif").replace("/", ""),
   survivejs: require("../images/survivejs.png").replace("/", "")
 };
@@ -104,7 +105,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading fit>
+            <Heading>
               Data Definition
             </Heading>
             <CodePane
@@ -114,7 +115,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading fit>
+            <Heading>
               Column Definition
             </Heading>
             <CodePane
@@ -124,7 +125,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading fit>
+            <Heading>
               Table Definition
             </Heading>
             <CodePane
@@ -314,7 +315,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading fit>
+            <Heading>
               Data Definition
             </Heading>
             <CodePane
@@ -324,7 +325,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading fit>
+            <Heading>
               Column Definition
             </Heading>
             <CodePane
@@ -334,7 +335,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading fit>
+            <Heading>
               Table Definition
             </Heading>
             <CodePane
@@ -457,7 +458,11 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
+            <Image src={images.changelog} margin="40px auto" height="624px" />
+          </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading caps size={1}>
               Personal Lessons
             </Heading>
             <List>
@@ -469,7 +474,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
+            <Heading caps size={1}>
               API Lessons
             </Heading>
             <List>
@@ -481,7 +486,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
+            <Heading caps size={1}>
               SemVer Explained
             </Heading>
             <List>
@@ -523,7 +528,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
+            <Heading caps size={1}>
               The Good
             </Heading>
             <List>
@@ -536,7 +541,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
+            <Heading caps size={1}>
               The Bad
             </Heading>
             <List>
@@ -548,7 +553,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={slideTransition}>
-            <Heading caps fit size={1}>
+            <Heading caps size={1}>
               The Ugly
             </Heading>
             <List>
